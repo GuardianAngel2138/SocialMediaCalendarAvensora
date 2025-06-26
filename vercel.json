@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/posts/:match*",
+      "destination": "/posts/:match*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/"
+    }
+  ]
+}
