@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Users, Target, MessageSquare, Grid, CalendarDays } from 'lucide-react';
 import PostCard from './PostCard';
@@ -38,6 +37,7 @@ const Calendar: React.FC<CalendarProps> = ({ clientId }) => {
   const [availablePlatforms, setAvailablePlatforms] = useState<string[]>([]);
   const [viewMode, setViewMode] = useState<'calendar' | 'grid'>('calendar');
   const [currentMonthPosts, setCurrentMonthPosts] = useState<Post[]>([]);
+  const [selectedDatePosts, setSelectedDatePosts] = useState<Post[]>([]);
 
   // Helper function to get month name for file loading
   const getMonthFileName = (date: Date) => {
@@ -213,17 +213,14 @@ const Calendar: React.FC<CalendarProps> = ({ clientId }) => {
   };
 
   const handleDateClick = (date: string, postsForDate: Post[]) => {
-    if (postsForDate.length === 1) {
-      setSelectedPost(postsForDate[0]);
-    } else {
-      setSelectedPost(null);
-    }
+    setSelectedDatePosts(postsForDate);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedPost(null);
+    setSelectedDatePosts([]);
   };
 
   // Filter posts based on selected platform, using current month posts for calendar view
@@ -348,8 +345,8 @@ const Calendar: React.FC<CalendarProps> = ({ clientId }) => {
       <PostModal 
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
-        posts={selectedPost ? [selectedPost] : []} 
-        selectedDate={selectedPost?.date || null} 
+        posts={selectedDatePosts.length > 0 ? selectedDatePosts : (selectedPost ? [selectedPost] : [])} 
+        selectedDate={selectedDatePosts.length > 0 ? selectedDatePosts[0]?.date : selectedPost?.date || null} 
       />
     </div>
   );
