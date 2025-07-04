@@ -1,6 +1,6 @@
 
-import React, { useEffect } from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PostCard from './PostCard';
 
 interface Post {
@@ -28,9 +28,12 @@ interface PostModalProps {
 }
 
 const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, posts, selectedDate }) => {
+  const [currentPostIndex, setCurrentPostIndex] = useState(0);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      setCurrentPostIndex(0); // Reset to first post when modal opens
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -68,14 +71,15 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, posts, selectedD
     });
   };
 
-  // Calculate total platforms for all posts
-  const getTotalPlatforms = () => {
-    const allPlatforms = new Set<string>();
-    posts.forEach(post => {
-      post.platforms.forEach(platform => allPlatforms.add(platform));
-    });
-    return allPlatforms.size;
+  const handlePrevPost = () => {
+    setCurrentPostIndex((prev) => (prev > 0 ? prev - 1 : posts.length - 1));
   };
+
+  const handleNextPost = () => {
+    setCurrentPostIndex((prev) => (prev < posts.length - 1 ? prev + 1 : 0));
+  };
+
+  const currentPost = posts[currentPostIndex];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -107,30 +111,50 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, posts, selectedD
               <X className="w-5 h-5 text-gray-500" />
             </button>
           </div>
-          <div className="mt-2 flex items-center gap-3">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-              {posts.length} {posts.length === 1 ? 'post' : 'posts'}
-            </span>
-            {posts.length > 0 && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                {getTotalPlatforms()} {getTotalPlatforms() === 1 ? 'platform' : 'platforms'}
+          
+          {/* Navigation and Post Count */}
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                {posts.length} {posts.length === 1 ? 'post' : 'posts'}
               </span>
+              {posts.length > 1 && (
+                <span className="text-sm text-gray-600">
+                  Post {currentPostIndex + 1} of {posts.length}
+                </span>
+              )}
+            </div>
+            
+            {/* Navigation arrows for multiple posts */}
+            {posts.length > 1 && (
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrevPost}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                  title="Previous post"
+                >
+                  <ChevronLeft className="w-4 h-4 text-gray-600" />
+                </button>
+                <button
+                  onClick={handleNextPost}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+                  title="Next post"
+                >
+                  <ChevronRight className="w-4 h-4 text-gray-600" />
+                </button>
+              </div>
             )}
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
           {posts.length === 0 ? (
             <div className="text-center py-8">
               <p className="text-gray-500">No posts scheduled for this date.</p>
             </div>
           ) : (
-            <div className="space-y-4">
-              {posts.map((post, index) => (
-                <PostCard key={post.id} post={post} index={index} />
-              ))}
-            </div>
+            <PostCard post={currentPost} index={currentPostIndex} />
           )}
         </div>
       </div>
