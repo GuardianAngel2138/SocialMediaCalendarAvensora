@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Users, Target, MessageSquare, Grid, CalendarDays } from 'lucide-react';
+import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Users, Target, MessageSquare, Grid, CalendarDays, Star } from 'lucide-react';
 import PostCard from './PostCard';
 import PostModal from './PostModal';
 import CalendarView from './CalendarView';
@@ -19,6 +19,7 @@ interface Post {
   approved?: boolean;
   media_url: string;
   date: string;
+  special?: boolean;
   post_links?: {
     [key: string]: string;
   };
@@ -76,6 +77,7 @@ const Calendar: React.FC<CalendarProps> = ({ clientId }) => {
         approved: post.approved,
         media_url: post.media_url,
         date: post.date,
+        special: post.special || false,
         post_links: post.post_links || {}
       }));
 
@@ -114,6 +116,7 @@ const Calendar: React.FC<CalendarProps> = ({ clientId }) => {
             approved: post.approved,
             media_url: post.media_url,
             date: post.date,
+            special: post.special || false,
             post_links: post.post_links || {}
           }));
           allPosts = [...allPosts, ...transformedPosts];
