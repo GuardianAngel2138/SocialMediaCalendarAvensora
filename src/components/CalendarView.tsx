@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 interface Post {
   id: string;
@@ -16,6 +16,7 @@ interface Post {
   approved?: boolean;
   media_url: string;
   date: string;
+  special?: boolean;
   post_links?: {
     [key: string]: string;
   };
@@ -76,6 +77,7 @@ const CalendarView: React.FC<CalendarViewProps> = ({ posts, onDateClick, current
                    today.getMonth() === currentDate.getMonth() && 
                    today.getFullYear() === currentDate.getFullYear();
     const hasPosts = postsForDay.length > 0;
+    const hasSpecialPost = postsForDay.some(post => post.special);
     
     // Check if this day is a Sunday (0 = Sunday)
     const dayOfWeek = new Date(currentDate.getFullYear(), currentDate.getMonth(), day).getDay();
@@ -91,11 +93,20 @@ const CalendarView: React.FC<CalendarViewProps> = ({ posts, onDateClick, current
           ${hasPosts ? 'cursor-pointer bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 hover:border-blue-300' : 'cursor-default'}
           ${!hasPosts && !isToday && !isSunday ? 'text-gray-400' : ''}
           ${isSunday && !isToday ? 'text-red-500' : ''}
+          ${hasSpecialPost ? 'ring-2 ring-yellow-300 ring-offset-1' : ''}
         `}
       >
         <span className={`${isToday ? 'font-bold' : ''} ${isSunday && !isToday ? 'text-red-500 font-semibold' : ''}`}>
           {day}
         </span>
+        
+        {/* Special Day Badge */}
+        {hasSpecialPost && (
+          <div className="absolute top-1 right-1">
+            <Star className={`w-3 h-3 ${isToday ? 'text-yellow-300 fill-yellow-300' : 'text-yellow-500 fill-yellow-500'}`} />
+          </div>
+        )}
+        
         {hasPosts && (
           <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
             <div className="flex gap-0.5">
@@ -177,6 +188,10 @@ const CalendarView: React.FC<CalendarViewProps> = ({ posts, onDateClick, current
           <div className="flex items-center gap-1">
             <div className="w-3 h-3 rounded bg-blue-500"></div>
             <span>Today</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
+            <span>Special day</span>
           </div>
         </div>
       </div>
