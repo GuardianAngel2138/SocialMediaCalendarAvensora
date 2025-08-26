@@ -1,139 +1,171 @@
-
 [
   {
-    "id": "seppost001",
-    "title": "Teachers' Day Tribute",
-    "description": "Honour Dr. S. Radhakrishnan and celebrate teachers across India.",
-    "captions": "📚 A teacher takes a hand, opens a mind, and touches a heart.\n\nThis #TeachersDay, let’s thank the mentors who inspire us every day. 🙏",
-    "aim": "Celebrate educators and connect with students/parents",
-    "benefit": "Emotional engagement & wide appeal",
-    "audience": ["India"],
-    "target": ["India"],
-    "tone": "Respectful",
-    "platforms": ["Instagram", "Facebook"],
-    "status": "scheduled",
-    "approved": false,
-    "media_url": "",
-    "date": "2025-09-05",
-    "post_links": { "Instagram": "", "Facebook": "" }
-  },
-  {
-    "id": "seppost002",
-    "title": "Onam Festive Cheers",
-    "description": "Celebrate Kerala’s biggest festival – Onam with pookalam, sadhya, and joy.",
-    "captions": "🌸 Onam brings colours, flavours, and togetherness.\n\nFrom beautiful pookalams to the grand sadhya feast — it’s a celebration of Kerala’s spirit. 🌿",
-    "aim": "Culturally connect with South Indian audiences",
-    "benefit": "Regional brand resonance",
-    "audience": ["Kerala", "South India"],
-    "target": ["Kerala", "South India"],
+    "id": "septpost001",
+    "title": "Thiruonam | Teachers' Day | Nabi Day",
+    "description": "Celebrate Thiruonam (Onam main day), Teachers' Day, and Eid Milad-un-Nabi together.",
+    "captions": "🌸 September 5th brings a triple celebration!\n\n🌼 Thiruonam: The heart of Onam festivities, symbolizing prosperity and togetherness.\n📚 Teachers' Day: Honoring the guiding lights of our lives.\n🕌 Nabi Day (Eid Milad-un-Nabi): Remembering the teachings of Prophet Muhammad.\n\n✨ A day of gratitude, devotion, and celebration!",
+    "aim": "Capture diverse cultural, educational, and spiritual sentiments on a single day",
+    "benefit": "Maximize engagement by resonating with multiple communities",
+    "audience": [
+      "Kerala",
+      "India",
+      "Muslim Community"
+    ],
+    "target": [
+      "India"
+    ],
     "tone": "Festive",
-    "platforms": ["Instagram", "Facebook"],
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
     "status": "scheduled",
     "approved": false,
     "media_url": "",
     "date": "2025-09-05",
-    "post_links": { "Instagram": "", "Facebook": "" }
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
   },
   {
-    "id": "seppost003",
-    "title": "International Literacy Day",
-    "description": "Promote education and awareness on Literacy Day.",
-    "captions": "✏️ Education is the passport to the future.\n\nThis #LiteracyDay, let’s spread knowledge and light the way for generations to come. 🌍",
-    "aim": "CSR & awareness content",
-    "benefit": "Positive social branding",
-    "audience": ["Global"],
-    "target": ["Global"],
+    "id": "septpost002",
+    "title": "Sree Narayana Guru Jayanthi",
+    "description": "Commemorate the birth anniversary of Sree Narayana Guru, spiritual leader and social reformer.",
+    "captions": "🌿 'One caste, one religion, one God for humankind.'\n\nOn this day, we honor **Sree Narayana Guru Jayanthi**, remembering his teachings of equality, peace, and social reform.\n\n🌟 A guiding light for unity and harmony.",
+    "aim": "Celebrate reformist and spiritual values",
+    "benefit": "Connect with Kerala and social reform-oriented audiences",
+    "audience": [
+      "Kerala",
+      "South India"
+    ],
+    "target": [
+      "Kerala",
+      "South India"
+    ],
     "tone": "Inspirational",
-    "platforms": ["Instagram", "Facebook"],
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
     "status": "scheduled",
     "approved": false,
     "media_url": "",
-    "date": "2025-09-08",
-    "post_links": { "Instagram": "", "Facebook": "" }
+    "date": "2025-09-07",
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
   },
   {
-    "id": "seppost004",
-    "title": "World Ozone Day",
-    "description": "Raise awareness about protecting the ozone layer.",
-    "captions": "🌍 Protect the ozone, protect the planet.\n\nOn #WorldOzoneDay, let’s commit to a cleaner and greener tomorrow. 🌱",
-    "aim": "Eco-conscious branding",
-    "benefit": "Align with sustainability messaging",
-    "audience": ["Global"],
-    "target": ["Global"],
-    "tone": "Awareness",
-    "platforms": ["Instagram", "Facebook"],
+    "id": "septpost003",
+    "title": "Sree Krishna Jayanthi & Hindi Diwas",
+    "description": "Celebrate the birth of Lord Krishna and the recognition of Hindi language.",
+    "captions": "🎉 Double joy on September 14!\n\n👶🏼 **Sree Krishna Jayanthi**: Celebrating the birth of Lord Krishna with devotion, bhajans, and cultural festivities.\n📝 **Hindi Diwas**: Honoring Hindi as the language that unites millions across India.\n\n🌟 A day of devotion and cultural pride.",
+    "aim": "Blend religious devotion with linguistic pride",
+    "benefit": "Reach diverse audiences through cultural and linguistic connection",
+    "audience": [
+      "India"
+    ],
+    "target": [
+      "India"
+    ],
+    "tone": "Spiritual & Cultural",
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
     "status": "scheduled",
     "approved": false,
     "media_url": "",
-    "date": "2025-09-16",
-    "post_links": { "Instagram": "", "Facebook": "" }
+    "date": "2025-09-14",
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
   },
   {
-    "id": "seppost005",
-    "title": "Engineers’ Day Celebration",
-    "description": "Pay tribute to engineers and Dr. Mokshagundam Visvesvaraya.",
-    "captions": "⚙️ Engineers build dreams, brick by brick, code by code.\n\nThis #EngineersDay, let’s salute the innovators shaping our future. 🚀",
-    "aim": "Connect with tech & student audience",
-    "benefit": "Professional community engagement",
-    "audience": ["India"],
-    "target": ["India"],
-    "tone": "Inspirational",
-    "platforms": ["Instagram", "Facebook"],
-    "status": "scheduled",
-    "approved": false,
-    "media_url": "",
-    "date": "2025-09-15",
-    "post_links": { "Instagram": "", "Facebook": "" }
-  },
-  {
-    "id": "seppost006",
-    "title": "World Peace Day",
-    "description": "Highlight the message of peace and unity.",
-    "captions": "☮️ Peace begins with a smile.\n\nOn this #InternationalDayOfPeace, let’s spread kindness and unity. 🌎",
-    "aim": "Global peace campaign",
-    "benefit": "Positive brand image",
-    "audience": ["Global"],
-    "target": ["Global"],
-    "tone": "Hopeful",
-    "platforms": ["Instagram", "Facebook"],
-    "status": "scheduled",
-    "approved": false,
-    "media_url": "",
-    "date": "2025-09-21",
-    "post_links": { "Instagram": "", "Facebook": "" }
-  },
-  {
-    "id": "seppost007",
+    "id": "septpost004",
     "title": "Navratri Begins",
-    "description": "Celebrate nine nights of devotion and dance.",
-    "captions": "✨ Navratri — nine nights of devotion, colours, and dance!\n\nFrom garba to fasting, let’s welcome Maa Durga with open hearts. 🙏",
-    "aim": "Culturally connect with Indian audiences",
-    "benefit": "Festive engagement boost",
-    "audience": ["India"],
-    "target": ["India"],
-    "tone": "Festive",
-    "platforms": ["Instagram", "Facebook"],
+    "description": "Kickstart the nine nights of devotion, dance, and divine energy.",
+    "captions": "🙏✨ Navratri begins!\n\nNine nights of devotion, garba, and vibrant traditions start today.\n🌼 Let's welcome the divine feminine energy and celebrate culture, colors, and community.\n\n#Navratri2025 #FestivalOfColors",
+    "aim": "Celebrate the start of Navratri with cultural resonance",
+    "benefit": "Drive engagement with festive campaigns",
+    "audience": [
+      "India"
+    ],
+    "target": [
+      "India"
+    ],
+    "tone": "Festive & Spiritual",
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
     "status": "scheduled",
     "approved": false,
     "media_url": "",
     "date": "2025-09-22",
-    "post_links": { "Instagram": "", "Facebook": "" }
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
   },
   {
-    "id": "seppost008",
-    "title": "World Pharmacists Day",
-    "description": "Celebrate pharmacists for their role in healthcare.",
-    "captions": "💊 From research to care, pharmacists make a difference.\n\nThis #WorldPharmacistsDay, we thank them for being the backbone of healthcare. ❤️",
-    "aim": "Healthcare appreciation content",
-    "benefit": "Trust-building and CSR alignment",
-    "audience": ["Global"],
-    "target": ["Global"],
-    "tone": "Respectful",
-    "platforms": ["Instagram", "Facebook"],
+    "id": "septpost005",
+    "title": "Durga Puja Celebrations",
+    "description": "Highlight the grandeur and joy of Durga Puja across India.",
+    "captions": "🌺 Durga Puja is here!\n\nFrom vibrant pandals to dhak beats and cultural gatherings, the air fills with devotion and celebration.\n\n🌟 A festival that blends spirituality, art, and tradition.\n\n#DurgaPuja2025 #FestiveIndia",
+    "aim": "Celebrate the cultural extravaganza of Durga Puja",
+    "benefit": "Engage audiences with one of India’s largest festivals",
+    "audience": [
+      "West Bengal",
+      "Assam",
+      "Odisha",
+      "India"
+    ],
+    "target": [
+      "India"
+    ],
+    "tone": "Festive",
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
     "status": "scheduled",
     "approved": false,
     "media_url": "",
-    "date": "2025-09-25",
-    "post_links": { "Instagram": "", "Facebook": "" }
+    "date": "2025-09-28",
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
+  },
+  {
+    "id": "septpost006",
+    "title": "Durga Ashtami Pooja",
+    "description": "Celebrate the sacred day of Ashtami during Navratri and Durga Puja.",
+    "captions": "🌸 **Durga Ashtami** — one of the most sacred days of Navratri & Durga Puja.\n\n🌼 Devotees perform special rituals and prayers, celebrating the victory of good over evil.\n\n✨ A day of devotion, power, and blessings.",
+    "aim": "Highlight spiritual significance of Ashtami",
+    "benefit": "Strengthen festive engagement with culturally rooted content",
+    "audience": [
+      "India"
+    ],
+    "target": [
+      "India"
+    ],
+    "tone": "Spiritual & Festive",
+    "platforms": [
+      "Instagram",
+      "Facebook"
+    ],
+    "status": "scheduled",
+    "approved": false,
+    "media_url": "",
+    "date": "2025-09-30",
+    "post_links": {
+      "Instagram": "",
+      "Facebook": ""
+    }
   }
 ]
